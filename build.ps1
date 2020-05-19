@@ -1,5 +1,5 @@
 ﻿Remove-Item –path ./client –recurse
-& java -jar swagger-codegen-cli-2.4.5.jar generate -i https://api.cloudmersive.com/swagger/api/nlpv2 -l csharp -o client -c packageconfig.json
+& java -jar swagger-codegen-cli-2.4.5.jar generate -i https://api.cloudmersive.com/swagger/api/speech -l csharp -o client -c packageconfig.json
 #(Get-Content ./client/src/api/ConvertDocumentApi.js).replace('var returnType = Object;', "var returnType = 'Blob';") | Set-Content ./client/src/api/ConvertDocumentApi.js
 #(Get-Content ./client/src/api/ConvertWebApi.js).replace('var returnType = Object;', "var returnType = 'Blob';") | Set-Content ./client/src/api/ConvertWebApi.js
 #& npm build ./client
@@ -12,9 +12,9 @@
 
 
 
-$csprojpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.NLP/Cloudmersive.APIClient.NET.NLP.csproj
-$csprojtestpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.NLP.Test/Cloudmersive.APIClient.NET.NLP.Test.csproj
-$nuspecpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.NLP/Cloudmersive.APIClient.NET.NLP.nuspec
+$csprojpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.NLP/Cloudmersive.APIClient.NET.Speech.csproj
+$csprojtestpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.NLP.Test/Cloudmersive.APIClient.NET.Speech.Test.csproj
+$nuspecpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.NLP/Cloudmersive.APIClient.NET.Speech.nuspec
 $slnpath = Resolve-Path ./client/Cloudmersive.APIClient.NET.NLP.sln
 
 
