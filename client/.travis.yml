@@ -4,6 +4,6 @@
 language: csharp
 mono:
   - latest
-solution: Cloudmersive.APIClient.NET.NLP.sln
+solution: Cloudmersive.APIClient.NET.Speech.sln
 script:
   - /bin/sh ./mono_nunit_test.sh

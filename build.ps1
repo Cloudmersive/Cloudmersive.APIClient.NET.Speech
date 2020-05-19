@@ -12,10 +12,10 @@
 
 
 
-$csprojpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.NLP/Cloudmersive.APIClient.NET.Speech.csproj
-$csprojtestpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.NLP.Test/Cloudmersive.APIClient.NET.Speech.Test.csproj
-$nuspecpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.NLP/Cloudmersive.APIClient.NET.Speech.nuspec
-$slnpath = Resolve-Path ./client/Cloudmersive.APIClient.NET.NLP.sln
+$csprojpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.Speech/Cloudmersive.APIClient.NET.Speech.csproj
+$csprojtestpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.Speech.Test/Cloudmersive.APIClient.NET.Speech.Test.csproj
+$nuspecpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.Speech/Cloudmersive.APIClient.NET.Speech.nuspec
+$slnpath = Resolve-Path ./client/Cloudmersive.APIClient.NET.Speech.sln
 
 
 (Get-Content $nuspecpath).replace('<title>Swagger Library</title>', "<title>Cloudmersive NLP API Client</title><licenseUrl>https://www.apache.org/licenses/LICENSE-2.0.txt</licenseUrl>") | Set-Content $nuspecpath
