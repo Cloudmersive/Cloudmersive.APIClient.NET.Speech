@@ -3,7 +3,7 @@
     <metadata>
         <!-- The identifier that must be unique within the hosting gallery -->
         <id>$id$</id>
-        <title>Cloudmersive NLP API Client</title><licenseUrl>https://www.apache.org/licenses/LICENSE-2.0.txt</licenseUrl>
+        <title>Cloudmersive Speech API Client</title><licenseUrl>https://www.apache.org/licenses/LICENSE-2.0.txt</licenseUrl>
 
         <!-- The package version number that is used when resolving dependencies -->
         <version>$version$</version>
@@ -22,7 +22,7 @@
         <description>The powerful Natural Language Processing APIs let you perform part of speech tagging, entity identification, sentence parsing, and much more to help you understand the meaning of unstructured text.</description>
 
         <!-- Dependencies are automatically installed when the package is installed -->
-        <projectUrl>https://cloudmersive.com/nlp-api</projectUrl><dependencies>
+        <projectUrl>https://cloudmersive.com/voice-recognition-and-speech-api</projectUrl><dependencies>
 
             <dependency id="NewtonSoft.Json" version="10.0.3" />
             <dependency id="JsonSubTypes" version="1.2.0" />
