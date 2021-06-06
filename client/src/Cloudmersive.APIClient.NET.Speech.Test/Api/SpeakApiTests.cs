@@ -19,6 +19,7 @@ using NUnit.Framework;
 
 using Cloudmersive.APIClient.NET.Speech.Client;
 using Cloudmersive.APIClient.NET.Speech.Api;
+using Cloudmersive.APIClient.NET.Speech.Model;
 
 namespace Cloudmersive.APIClient.NET.Speech.Test
 {
@@ -73,6 +74,18 @@ namespace Cloudmersive.APIClient.NET.Speech.Test
             //string format = null;
             //string text = null;
             //var response = instance.SpeakPost(format, text);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
+        /// Test SpeakTextToSpeech
+        /// </summary>
+        [Test]
+        public void SpeakTextToSpeechTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //TextToSpeechRequest reqConfig = null;
+            //var response = instance.SpeakTextToSpeech(reqConfig);
             //Assert.IsInstanceOf<Object> (response, "response is Object");
         }
         
