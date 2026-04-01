@@ -65,28 +65,15 @@ namespace Cloudmersive.APIClient.NET.Speech.Test
 
         
         /// <summary>
-        /// Test SpeakPost
+        /// Test SpeechSpeakTextVoiceBasicAudioPost
         /// </summary>
         [Test]
-        public void SpeakPostTest()
+        public void SpeechSpeakTextVoiceBasicAudioPostTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string format = null;
-            //string text = null;
-            //var response = instance.SpeakPost(format, text);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
-        }
-        
-        /// <summary>
-        /// Test SpeakTextToSpeech
-        /// </summary>
-        [Test]
-        public void SpeakTextToSpeechTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //TextToSpeechRequest reqConfig = null;
-            //var response = instance.SpeakTextToSpeech(reqConfig);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //TextToSpeechRequest body = null;
+            //var response = instance.SpeechSpeakTextVoiceBasicAudioPost(body);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
     }

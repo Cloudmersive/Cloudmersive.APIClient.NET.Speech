@@ -29,7 +29,7 @@ namespace Cloudmersive.APIClient.NET.Speech.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "4.0.2";
+        public const string Version = "4.1.0";
 
         /// <summary>
         /// Identifier for ISO 8601 DateTime Format
@@ -114,8 +114,8 @@ namespace Cloudmersive.APIClient.NET.Speech.Client
         /// </summary>
         public Configuration()
         {
-            UserAgent = "Swagger-Codegen/4.0.2/csharp";
-            BasePath = "https://api.cloudmersive.com";
+            UserAgent = "Swagger-Codegen/4.1.0/csharp";
+            BasePath = "https://testapi.cloudmersive.com";
             DefaultHeader = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
             ApiKeyPrefix = new ConcurrentDictionary<string, string>();
@@ -131,7 +131,7 @@ namespace Cloudmersive.APIClient.NET.Speech.Client
             IDictionary<string, string> defaultHeader,
             IDictionary<string, string> apiKey,
             IDictionary<string, string> apiKeyPrefix,
-            string basePath = "https://api.cloudmersive.com") : this()
+            string basePath = "https://testapi.cloudmersive.com") : this()
         {
             if (string.IsNullOrWhiteSpace(basePath))
                 throw new ArgumentException("The provided basePath is invalid.", "basePath");
@@ -187,7 +187,7 @@ namespace Cloudmersive.APIClient.NET.Speech.Client
             string tempFolderPath = null,
             string dateTimeFormat = null,
             int timeout = 100000,
-            string userAgent = "Swagger-Codegen/4.0.2/csharp"
+            string userAgent = "Swagger-Codegen/4.1.0/csharp"
             // ReSharper restore UnusedParameter.Local
             )
         {
@@ -422,7 +422,7 @@ namespace Cloudmersive.APIClient.NET.Speech.Client
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
             report += "    Version of the API: v1\n";
-            report += "    SDK Package Version: 4.0.2\n";
+            report += "    SDK Package Version: 4.1.0\n";
 
             return report;
         }

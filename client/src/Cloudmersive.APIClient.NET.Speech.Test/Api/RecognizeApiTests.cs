@@ -65,14 +65,16 @@ namespace Cloudmersive.APIClient.NET.Speech.Test
 
         
         /// <summary>
-        /// Test RecognizeFile
+        /// Test SpeechRecognizeFilePost
         /// </summary>
         [Test]
-        public void RecognizeFileTest()
+        public void SpeechRecognizeFilePostTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string languageCode = null;
+            //string recognitionMode = null;
             //System.IO.Stream speechFile = null;
-            //var response = instance.RecognizeFile(speechFile);
+            //var response = instance.SpeechRecognizeFilePost(languageCode, recognitionMode, speechFile);
             //Assert.IsInstanceOf<SpeechRecognitionResult> (response, "response is SpeechRecognitionResult");
         }
         

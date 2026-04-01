@@ -34,9 +34,11 @@ namespace Cloudmersive.APIClient.NET.Speech.Model
         /// Initializes a new instance of the <see cref="SpeechRecognitionResult" /> class.
         /// </summary>
         /// <param name="textResult">Recognition result in text format.</param>
-        public SpeechRecognitionResult(string textResult = default(string))
+        /// <param name="timestamps">Token-level timestamps with character offsets into TextResult.</param>
+        public SpeechRecognitionResult(string textResult = default(string), List<TokenTimestamp> timestamps = default(List<TokenTimestamp>))
         {
             this.TextResult = textResult;
+            this.Timestamps = timestamps;
         }
         
         /// <summary>
@@ -47,6 +49,13 @@ namespace Cloudmersive.APIClient.NET.Speech.Model
         public string TextResult { get; set; }
 
         /// <summary>
+        /// Token-level timestamps with character offsets into TextResult
+        /// </summary>
+        /// <value>Token-level timestamps with character offsets into TextResult</value>
+        [DataMember(Name="Timestamps", EmitDefaultValue=false)]
+        public List<TokenTimestamp> Timestamps { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -55,6 +64,7 @@ namespace Cloudmersive.APIClient.NET.Speech.Model
             var sb = new StringBuilder();
             sb.Append("class SpeechRecognitionResult {\n");
             sb.Append("  TextResult: ").Append(TextResult).Append("\n");
+            sb.Append("  Timestamps: ").Append(Timestamps).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -93,6 +103,11 @@ namespace Cloudmersive.APIClient.NET.Speech.Model
                     this.TextResult == input.TextResult ||
                     (this.TextResult != null &&
                     this.TextResult.Equals(input.TextResult))
+                ) && 
+                (
+                    this.Timestamps == input.Timestamps ||
+                    this.Timestamps != null &&
+                    this.Timestamps.SequenceEqual(input.Timestamps)
                 );
         }
 
@@ -107,6 +122,8 @@ namespace Cloudmersive.APIClient.NET.Speech.Model
                 int hashCode = 41;
                 if (this.TextResult != null)
                     hashCode = hashCode * 59 + this.TextResult.GetHashCode();
+                if (this.Timestamps != null)
+                    hashCode = hashCode * 59 + this.Timestamps.GetHashCode();
                 return hashCode;
             }
         }

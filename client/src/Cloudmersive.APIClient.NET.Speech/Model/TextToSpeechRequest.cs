@@ -25,7 +25,7 @@ using SwaggerDateConverter = Cloudmersive.APIClient.NET.Speech.Client.SwaggerDat
 namespace Cloudmersive.APIClient.NET.Speech.Model
 {
     /// <summary>
-    /// Input to a Text To Speech request
+    /// Input to a text-to-speech request
     /// </summary>
     [DataContract]
     public partial class TextToSpeechRequest :  IEquatable<TextToSpeechRequest>, IValidatableObject
@@ -33,14 +33,25 @@ namespace Cloudmersive.APIClient.NET.Speech.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TextToSpeechRequest" /> class.
         /// </summary>
-        /// <param name="format">File format for output audio file: wav or mp3, default is mp3.</param>
         /// <param name="text">Text to be converted to speech.</param>
-        public TextToSpeechRequest(string format = default(string), string text = default(string))
+        /// <param name="format">File format for output audio file: wav or mp3, default is mp3.</param>
+        /// <param name="languageCode">ISO 639-3 three-letter language code (e.g. eng, spa, fra, hin, ita, jpn, por, zho). Default is eng (English)..</param>
+        /// <param name="gender">Voice gender: Male or Female. Default is Female. Note: Male is not available for French and Chinese..</param>
+        public TextToSpeechRequest(string text = default(string), string format = default(string), string languageCode = default(string), string gender = default(string))
         {
-            this.Format = format;
             this.Text = text;
+            this.Format = format;
+            this.LanguageCode = languageCode;
+            this.Gender = gender;
         }
         
+        /// <summary>
+        /// Text to be converted to speech
+        /// </summary>
+        /// <value>Text to be converted to speech</value>
+        [DataMember(Name="Text", EmitDefaultValue=false)]
+        public string Text { get; set; }
+
         /// <summary>
         /// File format for output audio file: wav or mp3, default is mp3
         /// </summary>
@@ -49,11 +60,18 @@ namespace Cloudmersive.APIClient.NET.Speech.Model
         public string Format { get; set; }
 
         /// <summary>
-        /// Text to be converted to speech
+        /// ISO 639-3 three-letter language code (e.g. eng, spa, fra, hin, ita, jpn, por, zho). Default is eng (English).
         /// </summary>
-        /// <value>Text to be converted to speech</value>
-        [DataMember(Name="Text", EmitDefaultValue=false)]
-        public string Text { get; set; }
+        /// <value>ISO 639-3 three-letter language code (e.g. eng, spa, fra, hin, ita, jpn, por, zho). Default is eng (English).</value>
+        [DataMember(Name="LanguageCode", EmitDefaultValue=false)]
+        public string LanguageCode { get; set; }
+
+        /// <summary>
+        /// Voice gender: Male or Female. Default is Female. Note: Male is not available for French and Chinese.
+        /// </summary>
+        /// <value>Voice gender: Male or Female. Default is Female. Note: Male is not available for French and Chinese.</value>
+        [DataMember(Name="Gender", EmitDefaultValue=false)]
+        public string Gender { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -63,8 +81,10 @@ namespace Cloudmersive.APIClient.NET.Speech.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TextToSpeechRequest {\n");
-            sb.Append("  Format: ").Append(Format).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
+            sb.Append("  Format: ").Append(Format).Append("\n");
+            sb.Append("  LanguageCode: ").Append(LanguageCode).Append("\n");
+            sb.Append("  Gender: ").Append(Gender).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -100,14 +120,24 @@ namespace Cloudmersive.APIClient.NET.Speech.Model
 
             return 
                 (
+                    this.Text == input.Text ||
+                    (this.Text != null &&
+                    this.Text.Equals(input.Text))
+                ) && 
+                (
                     this.Format == input.Format ||
                     (this.Format != null &&
                     this.Format.Equals(input.Format))
                 ) && 
                 (
-                    this.Text == input.Text ||
-                    (this.Text != null &&
-                    this.Text.Equals(input.Text))
+                    this.LanguageCode == input.LanguageCode ||
+                    (this.LanguageCode != null &&
+                    this.LanguageCode.Equals(input.LanguageCode))
+                ) && 
+                (
+                    this.Gender == input.Gender ||
+                    (this.Gender != null &&
+                    this.Gender.Equals(input.Gender))
                 );
         }
 
@@ -120,10 +150,14 @@ namespace Cloudmersive.APIClient.NET.Speech.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Format != null)
-                    hashCode = hashCode * 59 + this.Format.GetHashCode();
                 if (this.Text != null)
                     hashCode = hashCode * 59 + this.Text.GetHashCode();
+                if (this.Format != null)
+                    hashCode = hashCode * 59 + this.Format.GetHashCode();
+                if (this.LanguageCode != null)
+                    hashCode = hashCode * 59 + this.LanguageCode.GetHashCode();
+                if (this.Gender != null)
+                    hashCode = hashCode * 59 + this.Gender.GetHashCode();
                 return hashCode;
             }
         }

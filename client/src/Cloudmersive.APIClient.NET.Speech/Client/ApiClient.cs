@@ -53,12 +53,12 @@ namespace Cloudmersive.APIClient.NET.Speech.Client
         public ApiClient()
         {
             Configuration = Cloudmersive.APIClient.NET.Speech.Client.Configuration.Default;
-            RestClient = new RestClient("https://api.cloudmersive.com");
+            RestClient = new RestClient("https://testapi.cloudmersive.com");
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiClient" /> class
-        /// with default base path (https://api.cloudmersive.com).
+        /// with default base path (https://testapi.cloudmersive.com).
         /// </summary>
         /// <param name="config">An instance of Configuration.</param>
         public ApiClient(Configuration config)
@@ -73,7 +73,7 @@ namespace Cloudmersive.APIClient.NET.Speech.Client
         /// with default configuration.
         /// </summary>
         /// <param name="basePath">The base path.</param>
-        public ApiClient(String basePath = "https://api.cloudmersive.com")
+        public ApiClient(String basePath = "https://testapi.cloudmersive.com")
         {
            if (String.IsNullOrEmpty(basePath))
                 throw new ArgumentException("basePath cannot be empty");

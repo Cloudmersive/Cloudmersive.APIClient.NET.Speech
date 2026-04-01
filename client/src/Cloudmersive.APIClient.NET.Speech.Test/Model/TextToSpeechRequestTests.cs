@@ -67,6 +67,14 @@ namespace Cloudmersive.APIClient.NET.Speech.Test
 
 
         /// <summary>
+        /// Test the property 'Text'
+        /// </summary>
+        [Test]
+        public void TextTest()
+        {
+            // TODO unit test for the property 'Text'
+        }
+        /// <summary>
         /// Test the property 'Format'
         /// </summary>
         [Test]
@@ -75,12 +83,20 @@ namespace Cloudmersive.APIClient.NET.Speech.Test
             // TODO unit test for the property 'Format'
         }
         /// <summary>
-        /// Test the property 'Text'
+        /// Test the property 'LanguageCode'
         /// </summary>
         [Test]
-        public void TextTest()
+        public void LanguageCodeTest()
         {
-            // TODO unit test for the property 'Text'
+            // TODO unit test for the property 'LanguageCode'
+        }
+        /// <summary>
+        /// Test the property 'Gender'
+        /// </summary>
+        [Test]
+        public void GenderTest()
+        {
+            // TODO unit test for the property 'Gender'
         }
 
     }

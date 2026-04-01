@@ -74,6 +74,14 @@ namespace Cloudmersive.APIClient.NET.Speech.Test
         {
             // TODO unit test for the property 'TextResult'
         }
+        /// <summary>
+        /// Test the property 'Timestamps'
+        /// </summary>
+        [Test]
+        public void TimestampsTest()
+        {
+            // TODO unit test for the property 'Timestamps'
+        }
 
     }
 
